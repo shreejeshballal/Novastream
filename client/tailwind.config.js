@@ -14,7 +14,7 @@ export default {
     extend: {
       colors: {
         'white': '#ffffff',
-        'black': '#000000',
+        'black': '#1f1f1f',
         'primary': '#9010c7',
         'light': '#f1f1f1',
         'hover': '#e5e5e5'
