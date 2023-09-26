@@ -5,22 +5,20 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-
     fontFamily: {
-      'montserrat': ['Montserrat', 'sans-serif'],
-      'poppins': ['Poppins', 'sans-serif'],
+      "dmSans": ["DM Sans", "sans-serif"],
     },
-
     extend: {
       colors: {
-        'white': '#ffffff',
-        'black': '#1f1f1f',
-        'primary': '#9010c7',
-        'light': '#f1f1f1',
-        'hover': '#e5e5e5'
-      },
+        'ascent': "#FF5001",
+        'background': "#0F0F0F",
+        'light': '#EFEFEF',
+        'dark-gray': "#231F20",
+        "gray": "#373334",
+        "border-gray": "#3E393A",
+        "light-gray": "#646368"
+      }
     },
   },
   plugins: [],
-  darkMode: "class"
 }
