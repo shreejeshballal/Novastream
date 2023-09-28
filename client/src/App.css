@@ -10,6 +10,15 @@
   border: 0;
 }
 
-.swiper {
-  width: 5rem;
+.sideBarActive {
+  height: 3em;
+  width: 3em;
+  border-radius: 100px;
+  background-color: white;
+}
+
+.sideBarActive > svg {
+  scale: 1.2;
+  opacity: 1;
+  fill: #000;
 }

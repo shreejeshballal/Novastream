@@ -1,5 +1,5 @@
-import Profile from './Rectangleprofile.png'
-import Space1 from './space-1.png'
-import Space from './Space.png'
+import Avatar from './avatar.png'
+import errorLight from './errorLight.png'
+import errorDark from './errorDark.png'
 
-export { Profile, Space1, Space };
+export { Avatar, errorLight, errorDark };

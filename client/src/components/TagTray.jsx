@@ -69,7 +69,7 @@ const TagTray = () => {
       >
         {scrollActive && (
           <div
-            className="p-2  transition-all absolute h-full flex justify-center items-center bg-background z-10 "
+            className="p-2  transition-all absolute h-full flex justify-center items-center bg-background  z-10 "
             onClick={scrollLeft}
           >
             <AiOutlineLeft className=" right-0 text-light text-xl" />

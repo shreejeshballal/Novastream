@@ -11,7 +11,7 @@ export default {
     extend: {
       colors: {
         'ascent': "#FF5001",
-        'background': "#0F0F0F",
+        'background': "#0f0f0f",
         'light': '#EFEFEF',
         'dark-gray': "#231F20",
         "gray": "#373334",
