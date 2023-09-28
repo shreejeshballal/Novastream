@@ -1,0 +1,12 @@
+.active{
+    height: 3em;
+    width: 3em;
+    border-radius: 100px;
+    background-color: white;
+}
+
+.active > svg{
+    scale: 1.2;
+    opacity: 1;
+    fill: #000;
+}
