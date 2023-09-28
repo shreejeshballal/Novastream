@@ -18,7 +18,7 @@ const AuthModal = ({ closeModal }) => {
   };
 
   const [loading, setLoading] = useState(false); // Loading state to wait for response
-  const [authType, setAuthType] = useState("Register"); // Register or Login state
+  const [authType, setAuthType] = useState("Login"); // Register or Login state
 
   // Form submit function
   const handleAuth = (e) => {
