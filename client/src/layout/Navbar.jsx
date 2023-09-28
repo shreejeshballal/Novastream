@@ -2,6 +2,12 @@ import { MdUpload } from "react-icons/md";
 import SearchBar from "../components/SearchBar";
 import TagTray from "../components/TagTray";
 const Navbar = () => {
+
+
+
+
+
+
   return (
     <nav className="w-full bg-background h-[5rem] md:gap-10 flex items-center px-6 justify-between fixed z-10  sm:px-10 md:px-7 gap-5">
       <img
