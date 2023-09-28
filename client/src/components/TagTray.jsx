@@ -26,6 +26,7 @@ const TagTray = () => {
   ]);
 
   const handleTrayItems = (id) => {
+    
     trayItems.forEach((element) => {
       if (element.id === id) {
         element.active = !element.active;
