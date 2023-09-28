@@ -6,11 +6,11 @@ import { BiSolidLike } from "react-icons/bi";
 
 import { IconContext } from "react-icons";
 
-import { Profile } from "../assets";
-
-import "./sidebar.css";
+import { Avatar } from "../assets";
+import AuthModal from "../components/AuthModal";
 
 function Navbar() {
+  const [authModal, setAuthModal] = useState(false);
   const [active, setActive] = useState(0);
   const icons = [
     {
@@ -41,7 +41,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex absolute w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center">
+      <div className="flex bg-transparent absolute w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center">
         <IconContext.Provider
           value={{
             className: "global-class-name ",
@@ -55,19 +55,27 @@ function Navbar() {
                 key={index}
                 onClick={() => handleClick(index)}
                 className={`flex justify-center items-center w-[3.5em] h-[3.5em] ${
-                  index === active ? "active" : ""
+                  index === active ? "sideBarActive" : ""
                 } cursor-pointer transition-all ease-in-out duration-500 rounded-full`}
               >
                 {icons[index].icon}
               </div>
             ))}
             <img
-              src={Profile}
-              alt=""
-              className="w-12 cursor-pointer sm:absolute sm:bottom-0 my-auto sm:mb-3 bg-white rounded-full border border-white"
+              src={Avatar}
+              alt="Avatar"
+              onClick={() => setAuthModal(true)}
+              className="w-12 cursor-pointer sm:absolute sm:bottom-0 my-auto sm:mb-3 transition-all  hover:border-2 bg-white rounded-full border border-white"
             />
           </div>
         </IconContext.Provider>
+        {authModal && (
+          <AuthModal
+            closeModal={() => {
+              setAuthModal(false);
+            }}
+          />
+        )}
       </div>
     </>
   );
