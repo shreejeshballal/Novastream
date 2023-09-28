@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 const TagTray = () => {
+  const [allState, setAllState] = useState({
+    id: 1,
+    name: "All",
+    active: true,
+  });
   const [trayItems, setTrayItems] = useState([
-    {
-      id: 1,
-      name: "All",
-      active: true,
-    },
     {
       id: 2,
       name: "Gaming",
@@ -25,8 +25,8 @@ const TagTray = () => {
     { id: 9, name: "Space", active: false },
   ]);
 
-  const handleTrayItems = (id) => {
-    
+  const handleTrayItemClick = (id) => {
+    setAllState({ ...allState, active: false });
     trayItems.forEach((element) => {
       if (element.id === id) {
         element.active = !element.active;
@@ -36,6 +36,14 @@ const TagTray = () => {
       return b.active - a.active || a.id - b.id;
     });
     setTrayItems([...sortedArray]);
+  };
+
+  const handleAllClick = () => {
+    setAllState({ ...allState, active: true });
+    trayItems.forEach((element) => {
+      element.active = false;
+    });
+    setTrayItems([...trayItems]);
   };
 
   const [scrollActive, setScrollActive] = useState(false);
@@ -76,17 +84,26 @@ const TagTray = () => {
             <AiOutlineLeft className=" right-0 text-light text-xl" />
           </div>
         )}
+        <button
+          onClick={handleAllClick}
+          // key={key}
+          className={`bg-dark-gray py-2 w-fit px-3 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
+            allState.active ? "bg-light-gray text-dark-gray" : ""
+          }}`}
+        >
+          {allState.name}
+        </button>
         {trayItems.map((item, key) => {
           return (
-            <div
-              onClick={() => handleTrayItems(item.id)}
+            <button
+              onClick={() => handleTrayItemClick(item.id)}
               key={key}
               className={`bg-dark-gray py-2 w-fit px-3 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
                 item.active ? "bg-light-gray text-dark-gray" : ""
               }}`}
             >
               {item.name}
-            </div>
+            </button>
           );
         })}
       </div>
