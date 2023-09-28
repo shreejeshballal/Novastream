@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { MdExplore } from "react-icons/md";
 import { BsMusicNoteList } from "react-icons/bs";
@@ -8,9 +8,11 @@ import { IconContext } from "react-icons";
 
 import { Avatar } from "../assets";
 import AuthModal from "../components/AuthModal";
+import { AuthModalContext } from "../context/AuthModalContext";
 
 function Navbar() {
-  const [authModal, setAuthModal] = useState(false);
+  const { openAuthModal } = useContext(AuthModalContext);
+  
   const [active, setActive] = useState(0);
   const icons = [
     {
@@ -64,18 +66,11 @@ function Navbar() {
             <img
               src={Avatar}
               alt="Avatar"
-              onClick={() => setAuthModal(true)}
+              onClick={openAuthModal}
               className="w-12 cursor-pointer sm:absolute sm:bottom-0 my-auto sm:mb-3 transition-all  hover:border-2 bg-white rounded-full border border-white"
             />
           </div>
         </IconContext.Provider>
-        {authModal && (
-          <AuthModal
-            closeModal={() => {
-              setAuthModal(false);
-            }}
-          />
-        )}
       </div>
     </>
   );
