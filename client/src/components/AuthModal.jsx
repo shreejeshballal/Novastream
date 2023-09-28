@@ -90,9 +90,7 @@ const AuthModal = ({ closeModal }) => {
               className="my-[0.2rem] text-light-gray cursor-pointer transition-all duration-300"
             >
               Don't have an account?{" "}
-              <span className="text-slate-300  underline underline-offset-[3.5px]">
-                Register
-              </span>
+              <span className="text-slate-300  ">Register</span>
             </p>
           ) : (
             <p
@@ -100,9 +98,7 @@ const AuthModal = ({ closeModal }) => {
               className="my-[0.2rem] text-light-gray cursor-pointer transition-all duration-300"
             >
               Already have an account?{" "}
-              <span className="text-slate-300  underline underline-offset-[3.5px]">
-                Login
-              </span>
+              <span className="text-slate-300  ">Login</span>
             </p>
           )}
         </form>
