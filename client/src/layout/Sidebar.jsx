@@ -7,12 +7,11 @@ import { BiSolidLike } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 import { Avatar } from "../assets";
-import AuthModal from "../components/AuthModal";
 import { AuthModalContext } from "../context/AuthModalContext";
 
 function Navbar() {
   const { openAuthModal } = useContext(AuthModalContext);
-  
+
   const [active, setActive] = useState(0);
   const icons = [
     {
@@ -60,7 +59,7 @@ function Navbar() {
                   index === active ? "sideBarActive" : ""
                 } cursor-pointer transition-all ease-in-out duration-500 rounded-full`}
               >
-                {icons[index].icon}
+                {item.icon}
               </div>
             ))}
             <img
