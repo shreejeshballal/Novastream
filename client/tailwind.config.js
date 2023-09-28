@@ -6,11 +6,12 @@ export default {
   ],
   theme: {
     fontFamily: {
-      "dmSans": ["DM Sans", "sans-serif"],
+      "dmsans": ["DM Sans", "sans-serif"],
     },
     extend: {
       colors: {
         'ascent': "#FF5001",
+        'light-ascent': "#ff5101ae",
         'background': "#0f0f0f",
         'light': '#EFEFEF',
         'dark-gray': "#231F20",

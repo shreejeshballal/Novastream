@@ -5,7 +5,7 @@ const TagTray = () => {
     {
       id: 1,
       name: "All",
-      active: false,
+      active: true,
     },
     {
       id: 2,

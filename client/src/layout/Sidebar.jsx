@@ -7,8 +7,10 @@ import { BiSolidLike } from "react-icons/bi";
 import { IconContext } from "react-icons";
 
 import { Avatar } from "../assets";
+import AuthModal from "../components/AuthModal";
 
 function Navbar() {
+  const [authModal, setAuthModal] = useState(false);
   const [active, setActive] = useState(0);
   const icons = [
     {
@@ -61,11 +63,19 @@ function Navbar() {
             ))}
             <img
               src={Avatar}
-              alt=""
-              className="w-12 cursor-pointer sm:absolute sm:bottom-0 my-auto sm:mb-3 bg-white rounded-full border border-white"
+              alt="Avatar"
+              onClick={() => setAuthModal(true)}
+              className="w-12 cursor-pointer sm:absolute sm:bottom-0 my-auto sm:mb-3 transition-all  hover:border-2 bg-white rounded-full border border-white"
             />
           </div>
         </IconContext.Provider>
+        {authModal && (
+          <AuthModal
+            closeModal={() => {
+              setAuthModal(false);
+            }}
+          />
+        )}
       </div>
     </>
   );
