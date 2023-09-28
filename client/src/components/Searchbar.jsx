@@ -1,7 +1,7 @@
 import { FiSearch } from "react-icons/fi";
 const SearchBar = () => {
   return (
-    <div className="flex flex-row md:flex-[2] justify-end ">
+    <div className="flex flex-row md:flex-[2] justify-end w-[70%]">
       <input
         name="search"
         type="text"
