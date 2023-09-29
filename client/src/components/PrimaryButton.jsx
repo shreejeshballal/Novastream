@@ -5,7 +5,7 @@ const PrimaryButton = ({ label, onClick, loading }) => {
       onClick={onClick}
       className={`flex w-full cursor-pointer bg-light-ascent max-w-[20rem] text-light items-center rounded-md transition-all duration-300 ${
         !loading && "hover:bg-light"
-      } hover:text-black py-2 font-dmsans justify-center  gap-2 `}
+      } hover:text-black py-3 font-dmsans justify-center  gap-2 `}
     >
       {!loading ? (
         label

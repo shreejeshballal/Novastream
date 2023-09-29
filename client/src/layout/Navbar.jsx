@@ -1,5 +1,5 @@
 import { MdUpload } from "react-icons/md";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/SearchBar.jsx";
 import TagTray from "../components/TagTray";
 import { useNavigate } from "react-router-dom";
 import { AuthModalContext } from "../context/AuthModalContext";

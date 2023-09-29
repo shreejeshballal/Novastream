@@ -40,8 +40,8 @@ const ImageUploader = ({ thumbnail, setThumbnail }) => {
       <h1 className="text-blend-light opacity-75  lg:text-[1.2rem] w-full text-center">
         Upload Thumbnail
       </h1>
-      <span className="text-blend-light opacity-75 text-[0.7rem]  lg:text-[0.9rem] mt-[-0.1rem]">
-        ( .jpg .jpeg .png .webp )
+      <span className="text-blend-light opacity-50 text-[0.7rem]  lg:text-[0.8rem] mt-[-0.1rem]">
+        [ .jpg .jpeg .png .webp ]
       </span>
       <input
         id="thumbnailUploader"
