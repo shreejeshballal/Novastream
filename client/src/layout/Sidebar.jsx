@@ -66,11 +66,11 @@ function Navbar() {
 								} cursor-pointer transition-all ease-in-out duration-500 rounded-full group`}
 							>
 								{item.icon}
-								<Tooltip text={item.name} pos="left" />
+								<Tooltip text={item.name} />
 							</div>
 						))}
 						<div className="w-12 sm:absolute sm:bottom-0 my-auto sm:mb-3 transition-all  hover:border-2 bg-white rounded-full border border-white group">
-							<Tooltip text="Profile" pos="left"/>
+							<Tooltip text="Profile" />
 							<img
 								src={Avatar}
 								alt="Avatar"
