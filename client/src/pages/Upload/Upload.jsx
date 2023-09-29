@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Input from "../../components/Input";
+import { AiOutlineClose } from "react-icons/ai";
 import ImageUploader from "./ImageUploader";
 import VideoUploader from "./VideoUploader";
 import PrimaryButton from "../../components/PrimaryButton";
@@ -51,10 +52,11 @@ const Upload = () => {
                 return (
                   <div
                     onClick={() => handleRemoveTag(key)}
-                    className={`bg-dark-gray py-2 w-fit px-3 text-[0.9rem] text-blend-light rounded-lg flex items-center justify-center hover:bg-light-gray  transition-all cursor-pointer }`}
+                    className="bg-dark-gray py-2  px-5  text-[0.9rem] p text-blend-light rounded-lg flex items-center justify-between  gap-2 hover:bg-light-gray  transition-all cursor-pointer "
                     key={key}
                   >
                     {item}
+                    <AiOutlineClose className=" right-1 text-[0.8rem] " />
                   </div>
                 );
               })}
