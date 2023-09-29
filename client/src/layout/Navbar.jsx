@@ -1,5 +1,5 @@
 import { MdUpload } from "react-icons/md";
-import SearchBar from "../components/SearchBar.jsx";
+import Searchbar from "../components/Searchbar.jsx";
 import TagTray from "../components/TagTray";
 import { useNavigate } from "react-router-dom";
 import { AuthModalContext } from "../context/AuthModalContext";
@@ -22,7 +22,7 @@ const Navbar = () => {
         className="h-10 aspect-square cursor-pointer"
       />
       <TagTray />
-      <SearchBar />
+      <Searchbar />
       <div
         className="bg-dark-gray p-2 rounded-full hover:bg-light-gray transition-all cursor-pointer"
         onClick={() => navigateToUpload()}
