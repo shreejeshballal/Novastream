@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
 const TagTray = () => {
+  //State to determing if scroll happened or not
+  const [scrollActive, setScrollActive] = useState(false);
+  // Try Items state
   const [allState, setAllState] = useState({
     id: 1,
     name: "All",
@@ -25,6 +28,7 @@ const TagTray = () => {
     { id: 9, name: "Space", active: false },
   ]);
 
+  //Fuction to handle tray item click
   const handleTrayItemClick = (id) => {
     setAllState({ ...allState, active: false });
     trayItems.forEach((element) => {
@@ -38,6 +42,7 @@ const TagTray = () => {
     setTrayItems([...sortedArray]);
   };
 
+  //Function to handle all tag click
   const handleAllClick = () => {
     setAllState({ ...allState, active: true });
     trayItems.forEach((element) => {
@@ -46,8 +51,7 @@ const TagTray = () => {
     setTrayItems([...trayItems]);
   };
 
-  const [scrollActive, setScrollActive] = useState(false);
-
+  //Use effect for scrolling functionality
   useEffect(() => {
     const container = document.getElementById("tagTray");
     container.addEventListener("scroll", () => {
@@ -60,11 +64,14 @@ const TagTray = () => {
     });
   }, [scrollActive]);
 
+  //Function to scroll right on button click
   const scrollRight = () => {
     const container = document.getElementById("tagTray");
     console.log(container.offsetWidth);
     container.scrollBy(container.offsetWidth / 2, 0);
   };
+
+  //Function to scroll left on button click
   const scrollLeft = () => {
     const container = document.getElementById("tagTray");
     container.scrollLeft -= 200;
@@ -86,7 +93,7 @@ const TagTray = () => {
         )}
         <button
           onClick={handleAllClick}
-          // key={key}
+          key={allState.id}
           className={`bg-dark-gray py-2 w-fit px-3 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
             allState.active ? "bg-light-gray text-dark-gray" : ""
           }}`}

@@ -2,7 +2,7 @@ import { errorDark } from "../assets";
 
 function Error() {
   return (
-    <div className="h-[100vh] overflow-hidden">
+    <div className="h-[100vh] absolute left-0 top-0 w-full ">
       <img
         src={errorDark}
         className="brightness-[0.4] h-[100vh] w-full object-cover absolute -z-10"
