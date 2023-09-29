@@ -22,7 +22,13 @@
   opacity: 1;
   fill: #000;
 }
-
-.ascent-shadow {
-  box-shadow: 0px 1px 10px 0px #f6580f8b;
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #373334;
+}
+body::-webkit-scrollbar {
+  width: 0.45rem;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #373334;
 }

@@ -31,7 +31,7 @@ const AuthModal = () => {
     return (
       <div className="w-full h-full fixed top-0 left-0 z-20 font-dmsans flex items-center justify-center backdrop-blur-sm  ">
         <div
-          className="w-full h-full absolute top-0 left-0 bg-background opacity-50 z-0 "
+          className="w-full h-full absolute top-0 left-0 bg-background opacity-50 z-0 cursor-pointer"
           onClick={closeAuthModal}
         />
         <div className="bg-background px-8 sm:px-12 py-6    w-[100%] sm:w-[26rem] mx-5 rounded-lg text-light drop-shadow-lg  z-30 flex items-center flex-col gap-5 ">
@@ -39,7 +39,7 @@ const AuthModal = () => {
             {authType == "Login" ? "Login" : "Register"}
           </h1>
           <AiOutlineClose
-            className="absolute text-1xl  rounded-full  p-1 h-7 w-7 right-4 top-4 hover:text-light-gray transition-all"
+            className="absolute text-1xl  rounded-full  p-1 h-7 w-7 right-4 top-4 hover:text-light-gray transition-all cursor-pointer"
             onClick={closeAuthModal}
           />
 

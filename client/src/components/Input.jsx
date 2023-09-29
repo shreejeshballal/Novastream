@@ -8,7 +8,7 @@ const Input = ({ type, name, placeholder, onChange, value }) => {
   return (
     <div className="w-full relative flex justify-end items-center">
       <input
-        className="bg-background ring-dark-gray rounded-lg ring-2 px-4 py-2 w-full transition-all duration-200 hover:bg-light-gray"
+        className="bg-background text-blend-light text-[0.95rem] placeholder-blend-light opacity-80 ring-dark-gray rounded-lg ring-2 px-4 py-3 w-full transition-all duration-200 hover:bg-gray"
         type={
           type == "password" ? (togglePassword ? "text" : "password") : type
         }
@@ -20,12 +20,12 @@ const Input = ({ type, name, placeholder, onChange, value }) => {
       {type == "password" ? (
         togglePassword ? (
           <AiOutlineEye
-            className="absolute  text-[1.3rem] text-light  opacity-50  hover:text-slate-300 transition-all w-7 h-full mr-3"
+            className="absolute  cursor-pointer text-[1.3rem] text-light  opacity-50  hover:text-slate-300 transition-all w-7 h-full mr-3"
             onClick={handleTogglePassword}
           />
         ) : (
           <AiOutlineEyeInvisible
-            className="absolute  text-[1.3rem] text-light opacity-50 hover:text-slate-300 transition-all  w-7 h-full mr-3"
+            className="absolute  cursor-pointer text-[1.3rem] text-light opacity-50 hover:text-slate-300 transition-all  w-7 h-full mr-3"
             onClick={handleTogglePassword}
           />
         )

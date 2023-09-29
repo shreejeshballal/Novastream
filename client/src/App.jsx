@@ -5,9 +5,9 @@ import Sidebar from "./layout/Sidebar";
 import Error from "./pages/Error";
 import AuthModal from "./components/AuthModal";
 import Home from "./pages/Home";
-import Upload from "./pages/Upload";
-
 import { AuthModalProvider } from "./context/AuthModalContext.jsx";
+import Container from "./layout/Container";
+import Upload from "./pages/Upload/Upload";
 
 function App() {
   return (
@@ -15,11 +15,13 @@ function App() {
       <AuthModalProvider>
         <Navbar />
         <Sidebar />
-        <Routes>
-          <Route path="*" element={<Error />} />
-          <Route path="/" element={<Home />} />
-          <Route path="/upload" element={<Upload />} />
-        </Routes>
+        <Container>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/upload" element={<Upload />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Container>
         <AuthModal />
       </AuthModalProvider>
     </BrowserRouter>

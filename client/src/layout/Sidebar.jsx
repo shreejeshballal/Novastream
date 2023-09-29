@@ -42,7 +42,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex bg-transparent absolute w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center">
+      <div className="flex sm:bg-transparent fixed w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center z-10">
         <IconContext.Provider
           value={{
             className: "global-class-name ",
