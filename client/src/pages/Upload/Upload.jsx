@@ -16,7 +16,10 @@ const Upload = () => {
   const handleAddTag = (e) => {
     let tag = e.target.value;
     let n = tag.length;
-    if (tag[n - 1] === " ") {
+
+    if (tag[0] == " ") {
+      e.target.value = "";
+    } else if (tag[n - 1] === " ") {
       setTagList([...tagList, tag]);
       e.target.value = "";
     }
