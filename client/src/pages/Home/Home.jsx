@@ -1,5 +1,4 @@
 import React from "react";
-import img from "../../assets/moviePoster.jpg";
 
 const Home = () => {
   return (
