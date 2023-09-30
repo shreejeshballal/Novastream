@@ -119,8 +119,8 @@ const TagTray = () => {
         <button
           onClick={handleAllClick}
           key={allState.id}
-          className={`bg-dark-gray py-2 w-fit px-3 text-slate-300 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
-            allState.active ? "bg-border-gray text-dark-gray" : ""
+          className={`bg-dark-gray py-2 w-fit px-3  text-slate-300 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
+            allState.active ? " bg-[#3E393A] " : ""
           }}`}
         >
           {allState.name}
@@ -130,8 +130,8 @@ const TagTray = () => {
             <button
               onClick={() => handleTrayItemClick(item.id)}
               key={key}
-              className={`bg-dark-gray py-2 w-fit  text-slate-300 px-3 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
-                item.active ? "bg-border-gray text-dark-gray" : ""
+              className={`bg-dark-gray py-2 w-fit px-3 text-slate-300  rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
+                item.active ? " bg-[#3E393A]  " : ""
               }}`}
             >
               {item.name}
