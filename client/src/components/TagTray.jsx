@@ -85,7 +85,7 @@ const TagTray = () => {
       >
         {scrollActive && (
           <div
-            className="pb-3 md:pb-0 p-2 transition-all absolute md:h-[5rem] top-0 flex justify-center items-center bg-background  z-10 "
+            className="pb-3 md:pb-0 p-2 transition-all hidden absolute md:h-[5rem] top-0 sm:flex justify-center items-center bg-background  z-10 "
             onClick={scrollLeft}
           >
             <AiOutlineLeft className=" right-0 text-light text-xl" />
@@ -114,7 +114,7 @@ const TagTray = () => {
           );
         })}
       </div>
-      <div className="p-2 transition-all" onClick={scrollRight}>
+      <div className="p-2 transition-all hidden sm:block" onClick={scrollRight}>
         <AiOutlineRight className="  md:right-0 text-light text-xl" />
       </div>
     </div>
