@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
 import { GoHomeFill } from "react-icons/go";
-import { MdExplore } from "react-icons/md";
+import { MdExplore, MdSubscriptions, MdFavorite } from "react-icons/md";
 import { BsMusicNoteList } from "react-icons/bs";
-import { BiSolidLike } from "react-icons/bi";
 
 import { IconContext } from "react-icons";
 
@@ -12,39 +11,45 @@ import { AuthModalContext } from "../context/AuthModalContext";
 import Tooltip from "../components/Tooltip";
 
 function Navbar() {
-  const { openAuthModal } = useContext(AuthModalContext);
+	const { openAuthModal } = useContext(AuthModalContext);
 
-  const [active, setActive] = useState(0);
-  const icons = [
-    {
-      name: "Home",
-      icon: (
-        <GoHomeFill className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
-      ),
-    },
-    {
-      name: "Explore",
-      icon: (
-        <MdExplore className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
-      ),
-    },
-    {
-      name: "Music",
-      icon: (
-        <BsMusicNoteList className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
-      ),
-    },
-    {
-      name: "Like",
-      icon: (
-        <BiSolidLike className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
-      ),
-    },
-  ];
+	const [active, setActive] = useState(0);
+	const icons = [
+		{
+			name: "Home",
+			icon: (
+				<GoHomeFill className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
+			),
+		},
+		{
+			name: "Explore",
+			icon: (
+				<MdExplore className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
+			),
+		},
+		{
+			name: "Music",
+			icon: (
+				<BsMusicNoteList className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
+			),
+		},
+		{
+			name: "Favorite",
+			icon: (
+				<MdFavorite className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
+			),
+		},
+		{
+			name: "Subscriptions",
+			icon: (
+				<MdSubscriptions className="opacity-50 hover:scale-[1.2] transition-all duration-200" />
+			),
+		},
+	];
 
-  const handleClick = (index) => {
-    setActive(index);
-  };
+	const handleClick = (index) => {
+		setActive(index);
+	};
 
 	return (
 		<>
