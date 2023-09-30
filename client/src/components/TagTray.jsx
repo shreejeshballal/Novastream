@@ -64,6 +64,27 @@ const TagTray = () => {
     });
   }, [scrollActive]);
 
+  const [show, setShow] = useState(true);
+  useEffect(() => {
+    let previousScrollPosition = 0;
+    let currentScrollPosition = 0;
+
+    window.addEventListener("scroll", function (e) {
+      // Get the new Value
+      currentScrollPosition = window.pageYOffset;
+
+      //Subtract the two and conclude
+      if (previousScrollPosition - currentScrollPosition < 0) {
+        setShow(false);
+      } else if (previousScrollPosition - currentScrollPosition > 0) {
+        setShow(true);
+      }
+
+      // Update the previous value
+      previousScrollPosition = currentScrollPosition;
+    });
+  }, []);
+
   //Function to scroll right on button click
   const scrollRight = () => {
     const container = document.getElementById("tagTray");
@@ -78,14 +99,18 @@ const TagTray = () => {
   };
 
   return (
-    <div className=" md:flex md:flex-[2] md:w-[20rem]   text-white absolute bg-background h-fit flex left-0 top-[5rem] md:items-center px-3 pb-3 md:pb-0 md:static w-full md:gap-2">
+    <div
+      className={` md:flex md:flex-[2] md:w-[20rem] ${
+        !show && "hidden"
+      } md:flex  text-white absolute bg-background h-fit flex left-0 top-[5rem] md:items-center px-3 pb-3 md:pb-0 md:static w-full md:gap-2`}
+    >
       <div
-        className="flex w-[100vw] md:flex-[100%] overflow-x-scroll no-scrollbar gap-3  "
+        className="flex w-[100vw] md:flex-[100%] overflow-x-scroll  no-scrollbar gap-3  "
         id="tagTray"
       >
         {scrollActive && (
           <div
-            className="pb-3 md:pb-0 p-2 transition-all hidden absolute md:h-[5rem] top-0 sm:flex justify-center items-center bg-background  z-10 "
+            className=" p-2 transition-all hidden sm:absolute  h-[40px]   sm:flex justify-center items-center bg-background  z-10 "
             onClick={scrollLeft}
           >
             <AiOutlineLeft className=" right-0 text-light text-xl" />
