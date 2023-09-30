@@ -130,7 +130,7 @@ const TagTray = () => {
             <button
               onClick={() => handleTrayItemClick(item.id)}
               key={key}
-              className={`bg-dark-gray py-2 w-fit  text-slate-300 px-3 rounded-lg flex items-center justify-center hover:bg-border-gray transition-all cursor-pointer ${
+              className={`bg-dark-gray py-2 w-fit  text-slate-300 px-3 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
                 item.active ? "bg-border-gray text-dark-gray" : ""
               }}`}
             >
