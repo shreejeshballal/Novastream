@@ -34,7 +34,7 @@ const AuthModal = () => {
           className="w-full h-full absolute top-0 left-0 bg-background opacity-50 z-0 cursor-pointer"
           onClick={closeAuthModal}
         />
-        <div className="bg-background px-8 sm:px-12 py-6    w-[100%] sm:w-[26rem] mx-5 rounded-lg text-light drop-shadow-lg  z-30 flex items-center flex-col gap-5 ">
+        <div className="bg-background px-8 sm:px-12 pt-7 pb-10   w-[100%] sm:w-[26rem] mx-5 rounded-lg text-light drop-shadow-lg  z-30 flex items-center flex-col gap-5 ">
           <h1 className="text-[2.2rem] font-bold    ">
             {authType == "Login" ? "Login" : "Register"}
           </h1>
@@ -110,7 +110,7 @@ const AuthModal = () => {
             <p className="text-light-gray text-[1.2rem]">or</p>
             <div className="h-[1px] flex-2 bg-light-gray w-full" />
           </div>
-          <div className="w-full flex gap-2 items-center justify-center rounded-md bg-gray py-2  cursor-pointer hover:bg-dark-gray transition-all duration-300 ">
+          <div className="w-full flex gap-2 items-center justify-center rounded-md bg-gray py-3  cursor-pointer hover:bg-dark-gray transition-all duration-300 ">
             <FcGoogle className="text-[1.5rem]" />
             <h1>Login with Google</h1>
           </div>
