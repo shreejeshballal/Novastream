@@ -4,7 +4,7 @@ import Navbar from "./layout/Navbar";
 import Sidebar from "./layout/Sidebar";
 import Error from "./pages/Error";
 import AuthModal from "./components/AuthModal";
-import Home from "./pages/Home";
+import Home from "./pages/Home/Home";
 import { AuthModalProvider } from "./context/AuthModalContext.jsx";
 import Container from "./layout/Container";
 import Upload from "./pages/Upload/Upload";
