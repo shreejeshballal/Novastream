@@ -8,6 +8,7 @@ import Home from "./pages/Home/Home";
 import { AuthModalProvider } from "./context/AuthModalContext.jsx";
 import Container from "./layout/Container";
 import Upload from "./pages/Upload/Upload";
+import Explore from "./pages/Explore";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Container>
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/explore" element={<Explore />} />
             <Route path="/upload" element={<Upload />} />
             <Route path="*" element={<Error />} />
           </Routes>
