@@ -1,11 +1,14 @@
 import React from "react";
+import { Videos } from "../../assets";
+
+import Carousel from "../../components/Carousel";
 
 const Home = () => {
-  return (
-    <div className=" h-[100%] w-[100%] text-light">
-      {/* <img src={img} className="h-[85vh] object-cover w-[100vw] "></img> */}
-    </div>
-  );
+	return (
+		<div className="w-full h-[calc(100vh-5rem)] overflow-hidden">
+			<Carousel Videos={Videos} />
+		</div>
+	);
 };
 
 export default Home;
