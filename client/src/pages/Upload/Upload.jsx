@@ -31,11 +31,11 @@ const Upload = () => {
   };
 
   return (
-    <div className="text-light h-full  w-full px-6 pt-[2rem]  sm:pt-[3rem] sm:pl-[3rem] mb-[5.5rem] flex flex-col gap-10">
+    <div className="text-light h-full items-center md:items-start w-full px-6 pt-[3rem]  sm:pt-[3rem] sm:pl-[3rem] mb-[5.5rem] flex flex-col gap-10">
       <h1 className="text-3xl font-bold w-full   text-center opacity-85 md:text-left lg:text-[2.5rem]">
         Upload your video
       </h1>
-      <form className="flex flex-col gap-3 lg:flex-row lg:min-w-[50rem] lg:max-w-[80%]">
+      <form className="flex flex-col gap-3 w-full lg:flex-row lg:min-w-[50rem] lg:max-w-[80%]">
         <div className="flex gap-3 flex-col lg:flex-1 lg:h-[full] ">
           <Input name="title" placeholder="Title" />
           <textarea
