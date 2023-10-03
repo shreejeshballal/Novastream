@@ -31,7 +31,7 @@ const Upload = () => {
   };
 
   return (
-    <div className="text-light h-full items-center md:items-start w-full px-6 pt-[3rem]  sm:pt-[3rem] sm:pl-[3rem] mb-[5.5rem] flex flex-col gap-10">
+    <div className="text-light h-full items-center md:items-start w-full px-6 pt-[3rem]  sm:pt-[3rem] sm:pl-[3rem]  flex flex-col gap-10">
       <h1 className="text-3xl font-bold w-full   text-center opacity-85 md:text-left lg:text-[2.5rem]">
         Upload your video
       </h1>
