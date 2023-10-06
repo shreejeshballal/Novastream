@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+import { scrollLeft, scrollRight } from "../../../util/Scroll";
 const TagTray = () => {
   //State to determing if scroll happened or not
   const [scrollActive, setScrollActive] = useState(false);
@@ -56,7 +57,7 @@ const TagTray = () => {
     const container = document.getElementById("tagTray");
     container.addEventListener("scroll", () => {
       let pos = container.scrollLeft;
-      if (pos > 50) {
+      if (pos > 0) {
         setScrollActive(true);
       } else {
         setScrollActive(false);
@@ -65,6 +66,7 @@ const TagTray = () => {
   }, [scrollActive]);
 
   const [show, setShow] = useState(true);
+
   useEffect(() => {
     let previousScrollPosition = 0;
     let currentScrollPosition = 0;
@@ -85,19 +87,6 @@ const TagTray = () => {
     });
   }, []);
 
-  //Function to scroll right on button click
-  const scrollRight = () => {
-    const container = document.getElementById("tagTray");
-    console.log(container.offsetWidth);
-    container.scrollBy(container.offsetWidth / 2, 0);
-  };
-
-  //Function to scroll left on button click
-  const scrollLeft = () => {
-    const container = document.getElementById("tagTray");
-    container.scrollLeft -= 200;
-  };
-
   return (
     <div
       className={` md:flex md:flex-[2] md:w-[20rem] ${
@@ -105,13 +94,13 @@ const TagTray = () => {
       } md:flex  text-white absolute bg-background h-fit flex left-0 top-[5rem] md:items-center px-3 pb-3 md:pb-0 md:static w-full md:gap-2`}
     >
       <div
-        className="flex w-[100vw] md:flex-[100%] overflow-x-scroll  no-scrollbar gap-3  "
+        className="flex w-[100vw] md:flex-[100%] overflow-x-scroll  no-scrollbar gap-2  "
         id="tagTray"
       >
         {scrollActive && (
           <div
-            className=" p-2 transition-all hidden sm:absolute  h-[40px]   sm:flex justify-center items-center bg-background  z-10 "
-            onClick={scrollLeft}
+            className=" p-2  transition-all hidden sm:absolute  h-[40px]   sm:flex justify-center items-center bg-background  z-10 "
+            onClick={() => scrollLeft("tagTray", 2)}
           >
             <AiOutlineLeft className=" right-0 text-light text-xl" />
           </div>
@@ -119,7 +108,7 @@ const TagTray = () => {
         <button
           onClick={handleAllClick}
           key={allState.id}
-          className={` py-2 w-fit px-3  text-slate-300 rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
+          className={` py-2 w-fit px-3  text-slate-300 rounded-lg flex items-center justify-center sm:hover:bg-light-gray transition-all cursor-pointer ${
             allState.active ? " bg-[#3E393A] " : "bg-dark-gray"
           }}`}
         >
@@ -130,7 +119,7 @@ const TagTray = () => {
             <button
               onClick={() => handleTrayItemClick(item.id)}
               key={key}
-              className={` py-2 w-fit px-3 text-slate-300  rounded-lg flex items-center justify-center hover:bg-light-gray transition-all cursor-pointer ${
+              className={` py-2 w-fit px-3 text-slate-300  rounded-lg flex items-center justify-center sm:hover:bg-light-gray transition-all cursor-pointer ${
                 item.active == true ? " bg-border-gray " : " bg-dark-gray"
               }}`}
             >
@@ -139,7 +128,12 @@ const TagTray = () => {
           );
         })}
       </div>
-      <div className="p-2 transition-all hidden sm:block" onClick={scrollRight}>
+      <div
+        className="p-2 sm:flex justify-center h-[40px]  items-center  transition-all hidden "
+        onClick={() => {
+          scrollRight("tagTray", 2);
+        }}
+      >
         <AiOutlineRight className="  md:right-0 text-light text-xl" />
       </div>
     </div>

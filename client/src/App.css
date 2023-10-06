@@ -7,7 +7,12 @@
   list-style: none;
   text-decoration: none;
   scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+
   border: 0;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
 
 .sideBarActive {
@@ -19,6 +24,11 @@
   opacity: 1;
   fill: #000;
 }
+
+.darkshadow {
+  box-shadow: 0 0 10px 1px rgba(101, 101, 101, 0.253);
+}
+
 body {
   scrollbar-width: thin;
   scrollbar-color: #373334;

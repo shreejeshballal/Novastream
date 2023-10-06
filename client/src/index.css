@@ -4,6 +4,7 @@
 .no-scrollbar {
   scrollbar-width: none;
   overflow: -moz-scrollbars-none;
+  
 }
 .no-scrollbar::-webkit-scrollbar {
   display: none;
