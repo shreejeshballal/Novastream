@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { AiOutlineRight, AiOutlineLeft } from "react-icons/ai";
+import { scrollLeft, scrollRight } from "../../../util/Scroll";
 const TagTray = () => {
   //State to determing if scroll happened or not
   const [scrollActive, setScrollActive] = useState(false);
@@ -86,20 +87,6 @@ const TagTray = () => {
     });
   }, []);
 
-  //Function to scroll right on button click
-  const scrollRight = () => {
-    const container = document.getElementById("tagTray");
-    console.log(container.offsetWidth);
-    container.scrollBy(container.offsetWidth / 1.5, 0);
-  };
-
-  //Function to scroll left on button click
-  const scrollLeft = () => {
-    const container = document.getElementById("tagTray");
-
-    container.scrollLeft -= container.offsetWidth;
-  };
-
   return (
     <div
       className={` md:flex md:flex-[2] md:w-[20rem] ${
@@ -113,7 +100,7 @@ const TagTray = () => {
         {scrollActive && (
           <div
             className=" p-2  transition-all hidden sm:absolute  h-[40px]   sm:flex justify-center items-center bg-background  z-10 "
-            onClick={scrollLeft}
+            onClick={() => scrollLeft("tagTray", 2)}
           >
             <AiOutlineLeft className=" right-0 text-light text-xl" />
           </div>
@@ -143,7 +130,9 @@ const TagTray = () => {
       </div>
       <div
         className="p-2 sm:flex justify-center h-[40px]  items-center  transition-all hidden "
-        onClick={scrollRight}
+        onClick={() => {
+          scrollRight("tagTray", 2);
+        }}
       >
         <AiOutlineRight className="  md:right-0 text-light text-xl" />
       </div>

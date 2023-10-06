@@ -6,7 +6,7 @@ const Button = ({ unsubscribe }) => {
   };
   return (
     <div
-      className=" flex-1 bg-dark-gray text-blend-light text-center w-fit px-3 py-2 rounded-md text-[0.8rem] sm:hover:bg-light-gray transition-all"
+      className="   bg-dark-gray text-blend-light text-center m-w-[7rem] px-4 py-[0.7rem] rounded-md text-[0.8rem] hover:bg-light-gray transition-all"
       onClick={handleClick}
     >
       Unsubscribe

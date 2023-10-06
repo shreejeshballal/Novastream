@@ -33,7 +33,7 @@ const Form = () => {
   };
 
   return (
-    <div className="bg-background px-8 sm:px-12 pt-7 pb-10 darkshadow  w-[100%] sm:w-[26rem] mx-5 rounded-lg text-light  z-30 flex items-center flex-col gap-5 ">
+    <div className="bg-background px-8 sm:px-12 pt-7 pb-10 darkshadow relative w-[100%] sm:w-[26rem] mx-5 rounded-lg text-light  z-30 flex items-center flex-col gap-5 ">
       <h1 className="text-[2.2rem] font-bold    ">
         {authType == "Login" ? "Login" : "Register"}
       </h1>
