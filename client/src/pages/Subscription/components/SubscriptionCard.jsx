@@ -1,12 +1,9 @@
 import React from "react";
 import Button from "./Button";
 
-const SubscriptionCard = ({ item, key }) => {
+const SubscriptionCard = ({ item, unsubscribe }) => {
   return (
-    <div
-      className="flex sm:flex-col sm:w-[15rem] flex-2 sm:text-center gap-2 h-full w-full items-center sm:px-4 py-2 sm:py-4"
-      key={key}
-    >
+    <div className="flex sm:flex-col sm:w-[15rem] flex-2 sm:text-center gap-2 h-full w-full items-center sm:px-4 py-2 sm:py-4">
       <div className="h-[65px] aspect-square w-fit sm:h-[100px]  rounded-full overflow-hidden  ">
         <img
           src={item.avatar}
@@ -22,7 +19,7 @@ const SubscriptionCard = ({ item, key }) => {
           {item.subscribers} subscribers
         </p>
       </div>
-      <Button />
+      <Button unsubscribe={unsubscribe} />
     </div>
   );
 };

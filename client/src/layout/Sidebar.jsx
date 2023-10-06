@@ -53,7 +53,7 @@ function Navbar() {
     },
   ];
 
-  const handleClick = (index, url) => {
+  const handleClick = (index, url, event) => {
     setActive(index);
     navigate(url);
   };
