@@ -15,11 +15,11 @@
   user-select: none; /* Standard syntax */
 }
 
-.sideBarActive {
+#sidebar a.active {
   background-color: white;
 }
 
-.sideBarActive > svg {
+#sidebar a.active > svg {
   scale: 1.1;
   opacity: 1;
   fill: #000;

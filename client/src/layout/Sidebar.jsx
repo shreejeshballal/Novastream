@@ -1,20 +1,18 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { MdExplore, MdSubscriptions, MdFavorite } from "react-icons/md";
 import { BsMusicNoteList } from "react-icons/bs";
-
 import { IconContext } from "react-icons";
-
 import { Avatar } from "../assets";
 import { AuthModalContext } from "../context/AuthModalContext";
-
 import Tooltip from "../components/Tooltip";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+
 
 function Navbar() {
   const { openAuthModal } = useContext(AuthModalContext);
   const navigate = useNavigate();
-  const [active, setActive] = useState(0);
+
   const icons = [
     {
       name: "Home",
@@ -53,7 +51,7 @@ function Navbar() {
     },
   ];
 
-  const handleClick = (index, url, event) => {
+  const handleClick = (index, url) => {
     setActive(index);
     navigate(url);
   };
@@ -67,18 +65,19 @@ function Navbar() {
           size: "1.5rem",
         }}
       >
-        <div className="flex left-0 self-center items-center w-full justify-evenly sm:w-full sm:h-[20rem] sm:flex-col sm:justify-around">
+        <div
+          className="flex left-0 self-center items-center w-full justify-evenly sm:w-full sm:h-[20rem] sm:flex-col sm:justify-around"
+          id="sidebar"
+        >
           {icons.map((item, index) => (
-            <div
+            <NavLink
+              to={item.to}
               key={index}
-              onClick={() => handleClick(index, item.to)}
-              className={`flex justify-center items-center w-[3em] h-[3em] ${
-                index === active ? "sideBarActive" : ""
-              } cursor-pointer transition-all ease-in-out duration-500 rounded-full group`}
+              className="flex justify-center items-center w-[3em] h-[3em]  cursor-pointer transition-all ease-in-out duration-500 rounded-full group"
             >
               {item.icon}
               <Tooltip text={item.name} />
-            </div>
+            </NavLink>
           ))}
           <div className="w-11 sm:w-12 sm:absolute sm:bottom-0 my-auto sm:mb-3 transition-all  hover:border-2 bg-white rounded-full border border-white group">
             <Tooltip text="Profile" />
