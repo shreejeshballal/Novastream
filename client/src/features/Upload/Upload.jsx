@@ -4,8 +4,11 @@ import { AiOutlineClose } from "react-icons/ai";
 import ImageUploader from "./components/ImageUploader";
 import VideoUploader from "./components/VideoUploader";
 import PrimaryButton from "../../components/PrimaryButton";
+import Locked from "../../components/Locked";
 
 const Upload = () => {
+  const [user, setUser] = useState(false);
+
   const [loading, setLoading] = useState(false);
   const [tagList, setTagList] = useState([]);
   const [thumbnail, setThumbnail] = useState(null);
@@ -30,7 +33,7 @@ const Upload = () => {
     setTagList(newList);
   };
 
-  return (
+  return user ? (
     <div className="text-light  items-center md:items-start w-full px-6 pt-[3rem] pb-[5rem] sm:pt-[3rem] sm:pl-[3rem]  flex flex-col gap-10">
       <h1 className="text-3xl font-bold w-full   text-center opacity-85 md:text-left lg:text-[2.5rem]">
         Upload your video
@@ -77,6 +80,8 @@ const Upload = () => {
         onClick={() => onUploadSubmit()}
       />
     </div>
+  ) : (
+    <Locked />
   );
 };
 

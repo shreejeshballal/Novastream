@@ -20,7 +20,7 @@ const Nofavorite = () => {
       <SecondaryButton
         label="Explore"
         onClick={() => {
-          navigate("/");
+          navigate("/explore");
         }}
       />
     </div>

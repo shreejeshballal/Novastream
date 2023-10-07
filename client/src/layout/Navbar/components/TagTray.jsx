@@ -91,7 +91,7 @@ const TagTray = () => {
     <div
       className={` md:flex md:flex-[2] md:w-[20rem] ${
         !show && "hidden"
-      } md:flex  text-white absolute bg-background h-fit flex left-0 top-[5rem] md:items-center px-3 pb-3 md:pb-0 md:static w-full md:gap-2`}
+      } md:flex  text-white absolute bg-background h-fit flex left-0 top-[5rem] md:items-center px-3 pb-3 md:pb-0 md:static w-full md:gap-0`}
     >
       <div
         className="flex w-[100vw] md:flex-[100%] overflow-x-scroll  no-scrollbar gap-2  "
@@ -129,7 +129,7 @@ const TagTray = () => {
         })}
       </div>
       <div
-        className="p-2 sm:flex justify-center h-[40px]  items-center  transition-all hidden "
+        className="p-2 sm:flex justify-center h-[40px items-center  transition-all hidden "
         onClick={() => {
           scrollRight("tagTray", 2);
         }}

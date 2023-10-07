@@ -8,7 +8,6 @@ import { AuthModalContext } from "../context/AuthModalContext";
 import Tooltip from "../components/Tooltip";
 import { NavLink, useNavigate } from "react-router-dom";
 
-
 function Navbar() {
   const { openAuthModal } = useContext(AuthModalContext);
   const navigate = useNavigate();
@@ -57,7 +56,7 @@ function Navbar() {
   };
 
   return (
-    <div className="flex sm:bg-transparent fixed w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center z-10">
+    <div className="flex  fixed w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center z-[1]">
       <IconContext.Provider
         value={{
           className: "global-class-name ",
