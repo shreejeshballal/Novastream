@@ -32,11 +32,19 @@ const TagTray = () => {
   //Fuction to handle tray item click
   const handleTrayItemClick = (id) => {
     setAllState({ ...allState, active: false });
+    let activebool = false;
     trayItems.forEach((element) => {
       if (element.id === id) {
         element.active = !element.active;
       }
+      if (element.active == true) {
+        activebool = true;
+      }
     });
+    if (activebool == false) {
+      setAllState({ ...allState, active: true });
+    }
+
     const sortedArray = trayItems.sort((a, b) => {
       return b.active - a.active || a.id - b.id;
     });

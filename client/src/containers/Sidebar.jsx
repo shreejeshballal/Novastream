@@ -12,6 +12,15 @@ function Navbar() {
   const { openAuthModal } = useContext(AuthModalContext);
   const navigate = useNavigate();
 
+  const handleProfileClick = () => {
+    localStorage.setItem("user", "hello");
+    if (localStorage.getItem("user")) {
+      navigate("/profile");
+    } else {
+      openAuthModal();
+    }
+  };
+
   const icons = [
     {
       name: "Home",
@@ -50,11 +59,6 @@ function Navbar() {
     },
   ];
 
-  const handleClick = (index, url) => {
-    setActive(index);
-    navigate(url);
-  };
-
   return (
     <div className="flex  fixed w-full h-[5rem] bottom-0 bg-background justify-evenly sm:h-[100vh]  sm:w-[5.5rem] sm:flex-col gap-10 sm:justify-around px-auto items-center z-[1]">
       <IconContext.Provider
@@ -83,7 +87,7 @@ function Navbar() {
             <img
               src={Avatar}
               alt="Avatar"
-              onClick={openAuthModal}
+              onClick={handleProfileClick}
               className="w-12 cursor-pointer"
             />
           </div>
