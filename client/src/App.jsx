@@ -4,7 +4,7 @@ import { Toaster } from "sonner";
 
 import Navbar from "./layout/Navbar/Navbar";
 import Sidebar from "./layout/Sidebar";
-import Error from "./pages/Error/Error";
+import Error from "./pages/error/Error";
 import AuthModal from "./features/authentication/AuthModal";
 import Home from "./pages/home/Home";
 import { AuthModalProvider } from "./context/AuthModalContext.jsx";
