@@ -11,7 +11,7 @@ import { AuthModalProvider } from "./context/AuthModalContext.jsx";
 import Container from "./layout/Container";
 import Upload from "./features/Upload/Upload";
 import Explore from "./pages/explore/Explore";
-import Subscription from "./pages/subscription/Subscription";
+import Subscription from "./pages/sub/Subscription";
 import Favorite from "./pages/favorite/Favorite.jsx";
 
 function App() {
