@@ -1,6 +1,6 @@
 import React from "react";
-import { Videos } from "../assets";
-import Card from "../components/Card";
+import { Videos } from "../../assets";
+import Card from "../../components/Card";
 
 function Explore() {
   return (
