@@ -13,12 +13,12 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleProfileClick = () => {
-    localStorage.setItem("user", "hello");
-    if (localStorage.getItem("user")) {
-      navigate("/profile");
-    } else {
-      openAuthModal();
-    }
+    // localStorage.setItem("user", "hello");
+    // if (localStorage.getItem("user")) {
+    //   navigate("/profile");
+    // } else {
+    openAuthModal();
+    // }
   };
 
   const icons = [

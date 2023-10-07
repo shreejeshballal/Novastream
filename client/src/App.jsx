@@ -10,7 +10,7 @@ import Home from "./pages/home/Home";
 import { AuthModalProvider } from "./context/AuthModalContext.jsx";
 import Container from "./layout/Container";
 import Upload from "./features/Upload/Upload";
-import Explore from "./pages/Explore";
+import Explore from "./pages/explore/Explore";
 import Subscription from "./pages/subscription/Subscription.jsx";
 import Favorite from "./pages/favorite/Favorite.jsx";
 
