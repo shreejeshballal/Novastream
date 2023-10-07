@@ -18,7 +18,7 @@ const NoSubscription = () => {
       <SecondaryButton
         label="Explore"
         onClick={() => {
-          navigate("/");
+          navigate("/explore");
         }}
       />
     </div>
