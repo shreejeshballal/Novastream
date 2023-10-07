@@ -1,5 +1,6 @@
 const Videos = [
 	{
+		id: 1,
 		video: {
 			title: "Epic Mountain Biking Adventure",
 			thumbnail:
@@ -13,6 +14,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 2,
 		video: {
 			title: "Cooking Masterclass: Italian Pasta",
 			thumbnail:
@@ -26,6 +28,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 3,
 		video: {
 			title: "Best Moments of a Comedy Show",
 			thumbnail:
@@ -39,6 +42,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 4,
 		video: {
 			title: "Traveling Through Ancient Ruins",
 			thumbnail:
@@ -52,6 +56,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 5,
 		video: {
 			title: "Gaming Marathon: Fortnite Victory Royale",
 			thumbnail:
@@ -65,6 +70,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 6,
 		video: {
 			title: "Wildlife Safari in Africa",
 			thumbnail:
@@ -78,6 +84,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 7,
 		video: {
 			title: "Tech Review: Latest Smartphone",
 			thumbnail:
@@ -91,6 +98,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 8,
 		video: {
 			title: "Artistic Painting Process",
 			thumbnail:
@@ -104,6 +112,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 9,
 		video: {
 			title: "Fitness Workout: HIIT Session",
 			thumbnail:
@@ -117,6 +126,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 10,
 		video: {
 			title: "Science Explained: Black Holes",
 			thumbnail:
@@ -130,6 +140,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 11,
 		video: {
 			title: "Traveling in Japan: Cherry Blossom Season",
 			thumbnail:
@@ -143,6 +154,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 12,
 		video: {
 			title: "DIY Home Improvement: Renovating Your Space",
 			thumbnail:
@@ -156,6 +168,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 13,
 		video: {
 			title: "Exploring Underwater Worlds: Scuba Diving Adventure",
 			thumbnail:
@@ -169,6 +182,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 14,
 		video: {
 			title: "Music Performance: Jazz Night Live",
 			thumbnail:
@@ -182,6 +196,7 @@ const Videos = [
 		},
 	},
 	{
+		id: 15,
 		video: {
 			title: "Nature's Beauty: Sunrise in the Mountains",
 			thumbnail:
