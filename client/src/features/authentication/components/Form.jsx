@@ -29,7 +29,13 @@ const Form = () => {
   const handleAuth = (e) => {
     e.preventDefault();
     setLoading(true);
-    toast.custom(() => <Toast label={"hello world"} />);
+    toast.custom(() => (
+			<Toast
+				label={"Successfull"}
+				subhead={"Successfully logged in"}
+				type={"success"}
+			/>
+		));
   };
 
   return (
