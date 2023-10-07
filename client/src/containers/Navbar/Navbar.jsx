@@ -8,11 +8,11 @@ const Navbar = () => {
   const navigate = useNavigate();
   const { openAuthModal } = useContext(AuthModalContext); // Context to open and close modal
   const navigateToUpload = () => {
-    if (localStorage.getItem("user")) {
-      openAuthModal();
-    } else {
-      navigate("/upload");
-    }
+    navigate("/upload");
+    // if (localStorage.getItem("user")) {
+    //   openAuthModal();
+    // } else {
+    // }
   };
   return (
     <nav className="w-full  bg-background h-[5rem] md:gap-10 flex items-center px-6 justify-between fixed z-20  sm:px-10 md:px-7 gap-5">
