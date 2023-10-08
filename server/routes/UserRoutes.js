@@ -1,10 +1,17 @@
 
 
 import { Router } from "express";
-import { createUser } from "../controllers/UserController.js"
+import { createUser, removeUser, loginUser, googleLogin } from "../controllers/UserController.js"
+import { authMiddleware } from "../middleware/AuthMiddleware.js";
 const router = Router();
 
-router.post("/", createUser);
+router.post("/register", createUser);
+router.post("/login", loginUser);
+router.post("/google", googleLogin);
+router.get("/remove/:id", authMiddleware, removeUser);
+
+
+
 
 // router.get("/:id", showUser);
 // router.post("/:id", updateUser);
