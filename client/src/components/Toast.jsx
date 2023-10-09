@@ -32,7 +32,7 @@ const Toast = ({ label, subhead, type }) => {
 
 	return (
 		<div
-			className={`bg-[#231F20] p-5 h-fit w-[20rem] rounded-lg border-2 ${borderColor}`}
+			className={`bg-[#231F20] sm:w-full sm:mb-16 lg:mb-0 p-5 h-fit lg:w-[20rem] rounded-lg border-2 ${borderColor}`}
 		>
 			<div className="flex items-center">
 				<div className="mr-2">{icon}</div>

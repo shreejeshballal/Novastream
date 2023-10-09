@@ -1,6 +1,6 @@
 const Card = ({ video }) => {
-  return (
-		<div className="m-6 w-96 text-white font-dmSans flex flex-col gap-2  ">
+	return (
+		<div className="my-3 mx-auto w-96 text-white font-dmSans flex flex-col gap-2  ">
 			<div className="relative">
 				<img
 					className="rounded-md w-96 h-60 object-cover"
