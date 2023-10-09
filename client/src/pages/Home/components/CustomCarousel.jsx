@@ -5,15 +5,14 @@ import { BiSolidRightArrow, BiSolidLeftArrow } from "react-icons/bi"; // Import 
 const CustomCarousel = ({ items }) => {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const cardWidth = 24 * 16;
-	const cardGap = 16; 
+	const cardGap = 16;
 	const containerRef = useRef(null);
 
 	const containerWidth = items.length * (cardWidth + cardGap + 150);
 
 	useEffect(() => {
-		containerRef.current.style.transform = `translateX(-${
-			currentIndex * (cardWidth + cardGap)
-		}px)`;
+		containerRef.current.style.transform = `translateX(-${currentIndex * (cardWidth + cardGap)
+			}px)`;
 	}, [currentIndex, cardWidth, cardGap]);
 
 	const handleNext = () => {
@@ -39,7 +38,7 @@ const CustomCarousel = ({ items }) => {
 	return (
 		<div className="relative overflow-hidden">
 			<div
-				className="flex overflow-hidden"
+				className="ml-4 flex overflow-hidden"
 				style={{
 					whiteSpace: "nowrap",
 					width: `${containerWidth}px`, // Set the container width to fit all cards with gaps

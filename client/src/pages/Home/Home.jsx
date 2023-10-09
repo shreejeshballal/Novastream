@@ -11,6 +11,7 @@ const Home = () => {
 			<h3 className="px-10 mb-5 text-xl sm:text-3xl">Enjoy your day with unlimited stream!</h3>
 			<Recommend />
 			<Popular />
+			<div className="h-16"></div>
 		</div>
 	);
 };
