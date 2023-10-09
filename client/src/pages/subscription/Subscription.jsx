@@ -54,7 +54,7 @@ const Subscription = () => {
   };
 
   const user = window.localStorage.getItem("user");
-  return user ? (
+  return !user ? (
     subscriptions.length > 0 ? (
       <div className=" text-light px-5 py-5 flex flex-col gap-4 pb-[5rem] sm:pb-[0rem]   ">
         <h1 className="text-3xl ">My Subscriptions</h1>
